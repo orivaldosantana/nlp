@@ -38,16 +38,28 @@ As avaliações serão baseadas em:
   * Relatório final 
 
 ## Cronograma 
-Abordagem baseada em problemas com os temas a seguir. 
-Unidade 1: 
-Introdução aos principais conceitos 
-Classificação de texto 
-Unidade 2: 
-Clusterização de texto 
-Análise de sentimentos
-Chatbots 
-Outros 
-Unidade 3: 
-Processamento de Linguagem Natural e Deep Learning 
-Projeto Final 
+
+Unidade I:
+1. 12/11 - Apresentação e Introdução 
+2. 19/11 - Conceitos básicos 
+3. 26/11 - Problema: Perguntas e respostas 
+4. 03/12 - Problema: *Chatbot* 
+5. 10/12 - Problema: *Chatbot* 
+6. 17/12 - Problema: *Chatbot* 
+
+Unidade II: 
+7. 14/01 - Problema: Classificação de Texto  
+8. 21/01 - Problema: Análise de sentimentos  
+9. 28/01 - Problema: Clusterização de texto 
+10. 04/01 - Problema: Clusterização de texto 
+11. 11/02 - Problema: Clusterização de texto 
+
+Unidade III: 
+12. 25/02 - Problema: NLP e Deep Learning 
+13. 04/03 - Problema: NLP e Deep Learning 
+14. 11/03 - Problema: NLP e Deep Learning 
+15. 18/03 - Problema: Projeto Final 
+16. 25/03 - Problema: Projeto Final 
+17. 01/04 - Problema: Apresentações 
+
 
