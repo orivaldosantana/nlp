@@ -1,4 +1,7 @@
 # Processamento de Linguagem Natural
+## Links importantes 
+* [Material de aulas](https://github.com/orivaldosantana/nlp/blob/main/aulas_2020_2.md)
+* [Referências](https://github.com/orivaldosantana/nlp/blob/main/referencias.md)
 
 ## Dados da Turma  
 * **Turma:** Tópicos II - Processamento de Linguagem Natural 
