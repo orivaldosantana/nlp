@@ -13,7 +13,7 @@ Descrição resumidada das atividades avaliativas
   * Gerar uma representação numérica (vetor) para cada texto (frase) 
     * *Bag of Words* 
   * Testar se a representação numéricas é coerente 
-    * Escolher pelo menos três fases e calcular 
+    * Escolher pelo menos três frases e calcular 
     * Calcular o grau de similaridade entre elas 
   * Realizar uma discussão crítica sobre este processo
     * Em torno de um parágrafo 
