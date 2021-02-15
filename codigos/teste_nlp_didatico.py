@@ -18,10 +18,24 @@ listaVazias = set('go get href ive id ill im ll m one s www ve t put feel i me m
 
 nlp = NLPDidatico(textoCorpus)
 
+print("\n-- Corpus Original --")
+nlp.printCorpus(textoCorpus)
+
 nlp.preprocessamento(listaVazias)
+print("\n-- Corpus Processado --")
+nlp.printPreProCorpus()
 
-print("Corpus Processado")
-print(nlp.corpusProcessadado)
-
-print("BoW") 
 nlp.geraBowCorpus()
+print("\n-- BoW Corpus --") 
+nlp.printBowCorpus()
+
+nlp.geraTfidfCorpus()
+print("\n-- TF-IDF Corpus --")
+nlp.printTfidCorpus()
+
+nlp.geraIndexadorSimilaridade()
+
+print("\n-- Encontra as N sentenças mais semelhantes -- ")
+nlp.encontraNmais('system engineering',4)
+
+
