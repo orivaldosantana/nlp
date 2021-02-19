@@ -1,3 +1,7 @@
+#fonte: https://rare-technologies.com/word2vec-tutorial/
+#fonte: https://radimrehurek.com/gensim/auto_examples/tutorials/run_word2vec.html#sphx-glr-auto-examples-tutorials-run-word2vec-py 
+#fonte: https://radimrehurek.com/gensim/models/word2vec.html#introduction   
+
 from gensim.test.utils import datapath
 from gensim import utils
 
