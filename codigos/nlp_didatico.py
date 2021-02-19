@@ -70,7 +70,7 @@ class NLPDidatico:
                 break 
         return resultado 
 
-    def printTfidCorpus(self, numIn = 5):
+    def printTfidfCorpus(self, numIn = 5):
         self.printCorpus(self.tfidfCorpus)
 
     def printCorpus(self, corpusIn, numIn = 5):
