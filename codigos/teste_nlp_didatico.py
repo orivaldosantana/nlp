@@ -31,11 +31,17 @@ nlp.printBowCorpus()
 
 nlp.geraTfidfCorpus()
 print("\n-- TF-IDF Corpus --")
-nlp.printTfidCorpus()
+nlp.printTfidfCorpus()
 
 nlp.geraIndexadorSimilaridade()
 
 print("\n-- Encontra as N sentenças mais semelhantes -- ")
 nlp.encontraNmais('system engineering',4)
 
+print("\n -- Gera representação LSI e imprime -- ")
+nlp.geraRepresentacaoLSI()
+nlp.printLSICorpus() 
+
+print("\n -- Gera gráfico com a representação LSI -- ")
+nlp.geraVisualizacaoLSI()  
 

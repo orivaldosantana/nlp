@@ -3,7 +3,9 @@ from collections import defaultdict
 from gensim import corpora 
 from gensim import models 
 from gensim import similarities
-import numpy as np 
+import numpy as np
+import matplotlib.pyplot as plt 
+
 
 class NLPDidatico: 
     """ Classe com recursos básicos NLP """
@@ -17,6 +19,7 @@ class NLPDidatico:
         self.tfidfCorpus = 0 
         self.tfidfModel = 0 
         self.indexadorSim = 0 
+        self.lsiX = 0
 
     # Entrada: um vetor com vários textos / sentenças 
     # Saída: Extração das principais palavras de cada texto. Cada texto vira um vetor de palavras mais importantes  
@@ -70,8 +73,28 @@ class NLPDidatico:
                 break 
         return resultado 
 
+    # Redução de Dimensão para texto
+    # LSI -  Latent Semantic Indexing
+    # Ver: https://radimrehurek.com/gensim/models/lsimodel.html
+    def geraRepresentacaoLSI(self):
+
+        dimensao = 2
+        # initialize an LSI transformation
+        lsiModel = models.LsiModel(self.tfidfCorpus, id2word=self.dicionario, num_topics=dimensao)  
+        corpusLsi = lsiModel[self.tfidfCorpus]
+        tamanhoCorpus = len(self.tfidfCorpus)
+
+        self.lsiX  = np.zeros((tamanhoCorpus,dimensao)) 
+
+        cont = 0
+        for doc, as_text in zip(corpusLsi, self.corpus):
+            print(doc, as_text)
+            self.lsiX[cont,0] = doc[0][1]
+            self.lsiX[cont,1] = doc[1][1]
+            cont = cont + 1 
+        
     def printTfidfCorpus(self, numIn = 5):
-        self.printCorpus(self.tfidfCorpus)
+        self.printCorpus(self.tfidfCorpus, numIn)
 
     def printCorpus(self, corpusIn, numIn = 5):
         cont = 0
@@ -86,4 +109,13 @@ class NLPDidatico:
 
     # Imprime o corpus pre processado 
     def printPreProCorpus(self, numIn = 5):
-        self.printCorpus(self.corpusProcessadado, numIn)      
+        self.printCorpus(self.corpusProcessadado, numIn) 
+
+    # Imprime representação LSI de duas dimensões 
+    def printLSICorpus(self, numIn = 5):
+        self.printCorpus(self.lsiX, numIn) 
+
+
+    def geraVisualizacaoLSI(self):
+        plt.scatter(self.lsiX[:,0],self.lsiX[:,1])
+        plt.savefig('./output/lsi_plot.png') 
