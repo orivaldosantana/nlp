@@ -27,7 +27,7 @@ nlp.printBowCorpus()
 
 nlp.geraTfidfCorpus()
 print("\n-- TF-IDF Corpus --")
-nlp.printTfidCorpus()
+nlp.printTfidfCorpus()
 
 nlp.geraIndexadorSimilaridade()
 
@@ -37,3 +37,9 @@ nlp.encontraNmais('i just know to begin with i am going to feel shy about it',5)
 print("\n-- Encontra as N sentenças mais semelhantes -- ")
 nlp.encontraNmais('i feel shy to him all the time',5)
 
+print("\n -- Gera representação LSI e imprime -- ")
+nlp.geraRepresentacaoLSI()
+nlp.printLSICorpus() 
+
+print("\n -- Gera gráfico com a representação LSI -- ")
+nlp.geraVisualizacaoLSI()  

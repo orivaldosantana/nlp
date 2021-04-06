@@ -82,15 +82,15 @@ class NLPDidatico:
         # initialize an LSI transformation
         lsiModel = models.LsiModel(self.tfidfCorpus, id2word=self.dicionario, num_topics=dimensao)  
         corpusLsi = lsiModel[self.tfidfCorpus]
-        tamanhoCorpus = len(self.tfidfCorpus)
+        tamanhoCorpus = len(corpusLsi)
 
         self.lsiX  = np.zeros((tamanhoCorpus,dimensao)) 
 
         cont = 0
-        for doc, as_text in zip(corpusLsi, self.corpus):
-            print(doc, as_text)
-            self.lsiX[cont,0] = doc[0][1]
-            self.lsiX[cont,1] = doc[1][1]
+        for doc in corpusLsi:
+            if len(doc) == 2:            
+                self.lsiX[cont,0] = doc[0][1]
+                self.lsiX[cont,1] = doc[1][1]
             cont = cont + 1 
         
     def printTfidfCorpus(self, numIn = 5):
