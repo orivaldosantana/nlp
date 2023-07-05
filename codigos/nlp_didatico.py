@@ -23,6 +23,8 @@ class NLPDidatico:
         self.lsiX = 0
         self.stemmer = SnowballStemmer("portuguese")
 
+    def setStemmer(self, st):
+        self.stemmer = st 
     # Entrada: um vetor com vários textos / sentenças
     # Saída: Extração das principais palavras de cada texto. Cada texto vira um vetor de palavras mais importantes
     # Descrição: Este pré-processamento torna todas palavras mínusculas, elimina as palavara vazias, eliminas as palavras que aparecem apenas uma vez
